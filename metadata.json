@@ -1,0 +1,7 @@
+{
+  "name": "Real-Time AI Conversation ",
+  "description": "An interactive real-time AI companion that talks to children about images using voice, featuring magic UI transformations via tool calls.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
