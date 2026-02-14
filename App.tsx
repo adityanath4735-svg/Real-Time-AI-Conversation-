@@ -69,12 +69,18 @@ const App: React.FC = () => {
 
   const startConversation = async () => {
     try {
+      // Check if API key is configured
+      if (!process.env.GEMINI_API_KEY || process.env.GEMINI_API_KEY === 'YOUR_API_KEY_HERE') {
+        setError("Please set your Gemini API key in .env.local file");
+        setStatus(SessionStatus.ERROR);
+        return;
+      }
+
       setStatus(SessionStatus.CONNECTING);
       setError(null);
       setTimeLeft(SESSION_DURATION_SECONDS);
 
-      // Fix: Use process.env.API_KEY directly as per guidelines.
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
       // Setup Audio Contexts
       if (!audioContextRef.current) {
