@@ -57,6 +57,10 @@ A delightful real-time voice conversation application where an AI storyteller en
    npm run build
    ```
 
+## 📹 Demo
+
+Check out `demo.mp4` to see the application in action! This video showcases the real-time voice interaction, atmospheric changes, and overall user experience.
+
 ## 🎮 How to Use
 
 1. **Start the conversation**: Click the "Say Hello! 👋" button to begin
